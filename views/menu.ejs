@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <h1>Full Menu</h1>
+
+    <h2><strong>Mains</strong></h2>
+    <% RESTAURANT.menu.forEach((main) => { %>
+       <% if (main.category === 'mains') { %>
+        <p><strong><%= main.name %></strong> $ <%= main.price  %></p> 
+        <% if (main.rating === 5) { %>
+       <p>Rating: <%= main.rating %> ⭐</p>
+       <% } else { %>
+       <p>Rating: <%= main.rating %></p>
+       <% } %>
+       <p><%= main.details %></p>
+       <% } %>
+    <% }) %>
+    <h2><strong>Desserts</strong></h2>
+    <% RESTAURANT.menu.forEach((dessert) => { %>
+       <% if (dessert.category === 'desserts') { %>
+        <p><strong><%= dessert.name %></strong> $ <%= dessert.price  %></p> 
+        <% if (dessert.rating === 5) { %>
+       <p>Rating: <%= dessert.rating %> ⭐</p>
+       <% } else { %>
+       <p>Rating: <%= dessert.rating %></p>
+       <% } %>
+       <p><%= dessert.details %></p>
+       <% } %>
+    <% }) %>
+    <h2><strong>Sides</strong></h2>
+    <% RESTAURANT.menu.forEach((side) => { %>
+       <% if (side.category === 'sides') { %>
+        <p><strong><%= side.name %></strong> $ <%= side.price  %></p> 
+        <% if (side.rating === 5) { %>
+       <p>Rating: <%= side.rating %> ⭐</p>
+       <% } else { %>
+       <p>Rating: <%= side.rating %></p>
+       <% } %>
+       <p><%= side.details %></p>
+       <% } %>
+    <% }) %>
+  </body>
+</html>
