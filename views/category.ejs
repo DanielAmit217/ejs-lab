@@ -10,9 +10,9 @@
   <% menuItems.forEach((item) => { %>
         <p><strong><%= item.name %></strong> $ <%= item.price  %></p> 
         <% if (item.rating === 5) { %>
-       <p>Rating: <%= item.rating %> ⭐</p>
-       <% } else { %>
-       <p>Rating: <%= item.rating %></p>
+            <p>Rating: <%= item.rating %> ⭐</p>
+        <% } else { %>
+            <p>Rating: <%= item.rating %></p>
        <% } %>
        <p><%= item.details %></p>
     <% }) %>
